@@ -1,0 +1,175 @@
+/* Variables CSS */
+:root {
+  --color-primario: #2C3E50;
+  --color-secundario: #18BC9C;
+  --color-acento: #F39C12;
+  --fuente-principal: Arial, Helvetica, sans-serif;
+  --sombra-suave: 0 4px 12px rgba(0,0,0,0.1);
+  --radio-borde: 12px;
+}
+
+/* Ajustes globales */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--fuente-principal);
+  padding-top: 70px; /* compensar navbar fijo */
+}
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+/* Hero section con imagen de fondo */
+.hero-section {
+  min-height: 90vh;
+  background: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee') no-repeat center center / cover;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(44, 62, 80, 0.65);
+}
+.hero-section .container {
+  z-index: 2;
+}
+
+/* Botón acento */
+.btn-accent {
+  background-color: var(--color-acento);
+  color: #fff;
+  border: none;
+}
+.btn-accent:hover {
+  background-color: #e67e22;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Tarjetas de servicios */
+.servicio-card {
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.img-servicio {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Equipo */
+.equipo-card {
+  border-radius: var(--radio-borde);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.equipo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.img-equipo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid var(--color-secundario);
+}
+
+/* Testimonios - efecto latido */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.07); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  transition: border-color 0.3s;
+}
+.img-testimonio {
+  display: block;
+}
+
+/* Tarjeta testimonio con borde arcoíris animado */
+.testimonio-card {
+  border-radius: var(--radio-borde);
+  border: 3px solid red;
+  animation: rainbow-border 4s linear infinite;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+.testimonio-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes rainbow-border {
+  0%   { border-color: #ff0000; }
+  16%  { border-color: #ff8800; }
+  33%  { border-color: #ffff00; }
+  50%  { border-color: #00cc00; }
+  66%  { border-color: #0088ff; }
+  83%  { border-color: #4400cc; }
+  100% { border-color: #ff0000; }
+}
+
+/* Controles del carrusel personalizados (fuera del grupo) */
+.custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primario);
+  border-radius: 50%;
+  border: none;
+  z-index: 5;
+}
+.custom-carousel-control.carousel-control-prev {
+  left: -50px;
+}
+.custom-carousel-control.carousel-control-next {
+  right: -50px;
+}
+.custom-carousel-control .carousel-control-prev-icon,
+.custom-carousel-control .carousel-control-next-icon {
+  filter: invert(1);
+}
+/* Ajuste en móvil para que los controles no se salgan */
+@media (max-width: 768px) {
+  .custom-carousel-control.carousel-control-prev {
+    left: 10px;
+  }
+  .custom-carousel-control.carousel-control-next {
+    right: 10px;
+  }
+}
+
+/* Contacto */
+.contacto-card {
+  border-radius: var(--radio-borde);
+  transition: transform 0.3s ease;
+}
+.contacto-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Responsividad adicional */
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2.2rem;
+  }
+  .hero-section {
+    min-height: 70vh;
+  }
+}

@@ -1,0 +1,531 @@
+/* ============================================
+   CSS Custom - Clínica Veterinaria
+   ============================================ */
+
+/* Variables CSS */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #18BC9C;
+    --accent-color: #F39C12;
+    --light-color: #ECF0F1;
+    --dark-color: #2C3E50;
+    --success-color: #27AE60;
+    --warning-color: #F39C12;
+    --danger-color: #E74C3C;
+    --text-color: #333;
+    --text-light: #7F8C8D;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset y Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #F8F9FA;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Menú Superior */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-brand i {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Sección Hero */
+.hero-section {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, var(--light-color) 0%, var(--primary-color) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .display-4 {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+}
+
+.hero-section .display-4 span {
+    color: var(--accent-color);
+}
+
+.hero-section .lead {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.hero-section .btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.hero-section img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Sección Servicios */
+#servicios {
+    padding: 4rem 0;
+}
+
+#servicios h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#servicios .card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+#servicios .card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+#servicios .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+#servicios .card-body {
+    padding: 1.5rem;
+}
+
+#servicios .card-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#servicios .card-text {
+    color: var(--text-light);
+}
+
+#servicios i.fa-stethoscope,
+#servicios i.fa-scalpel,
+#servicios i.fa-cut {
+    color: var(--accent-color);
+}
+
+/* Sección Equipo */
+#equipo {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+#equipo h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#equipo .card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+#equipo .card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+#equipo .card-body {
+    padding: 1.5rem;
+}
+
+#equipo .card-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#equipo .card-text {
+    color: var(--text-light);
+}
+
+/* Sección Testimonios */
+#clientes {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+}
+
+#clientes h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: -5%;
+}
+
+.carousel-control-next {
+    right: -5%;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Cards de Testimonios */
+#clientes .card {
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+    animation: rainbowBorder 8s linear infinite;
+}
+
+#clientes .card:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes rainbowBorder {
+    0% { border: 3px solid var(--primary-color); }
+    20% { border: 3px solid var(--secondary-color); }
+    40% { border: 3px solid var(--accent-color); }
+    60% { border: 3px solid var(--danger-color); }
+    80% { border: 3px solid var(--warning-color); }
+    100% { border: 3px solid var(--primary-color); }
+}
+
+.rainbow-border {
+    border: 3px solid transparent;
+    animation: rainbowBorder 8s linear infinite;
+}
+
+.heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#clientes .card-body {
+    padding: 1rem;
+}
+
+#clientes .card-title {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+#clientes .card-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Sección Contacto */
+#contacto {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+#contacto h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#contacto .card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+#contacto .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#contacto .btn {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+#contacto .btn:hover {
+    transform: translateY(-3px);
+}
+
+#contacto .form-control {
+    border-radius: var(--border-radius);
+    border: 1px solid #CED4DA;
+    padding: 0.75rem;
+    transition: var(--transition);
+}
+
+#contacto .form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.25);
+}
+
+#contacto .invalid-feedback {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+}
+
+#contacto .social-icons a {
+    transition: var(--transition);
+}
+
+#contacto .social-icons a:hover {
+    transform: translateY(-5px);
+    color: var(--accent-color) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+footer i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 6rem 0 2rem;
+    }
+    
+    .hero-section .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    #servicios h2,
+    #equipo h2,
+    #clientes h2,
+    #contacto h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .hero-section {
+        padding: 5rem 0 2rem;
+    }
+    
+    .hero-section .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%;
+    }
+    
+    .carousel-control-prev {
+        left: -5%;
+    }
+    
+    .carousel-control-next {
+        right: -5%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .display-4 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 0.9rem;
+    }
+    
+    .hero-section .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    #servicios .card-title,
+    #equipo .card-title {
+        font-size: 1.2rem;
+    }
+    
+    #contacto .fs-4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones Adicionales */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Estilo para el Modal */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-content {
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.modal-body i.fa-check-circle {
+    color: var(--success-color);
+}

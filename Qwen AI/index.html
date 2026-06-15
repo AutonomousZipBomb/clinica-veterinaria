@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Veterinaria PetCare - Atención integral para tus mascotas en Santo Domingo, República Dominicana">
+    <meta name="keywords" content="veterinaria, mascotas, clínica, consulta, cirugías, peluquería">
+    <meta name="author" content="PetCare">
+    <meta name="theme-color" content="#2C3E50">
+    <title>🐾 PetCare - Clínica Veterinaria</title>
+    
+    <!-- Bootstrap 5.3.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú fijo superior responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="fas fa-paw"></i> PetCare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-3 fw-bold mb-4">🐶 Bienvenidos a PetCare 🐱</h1>
+            <p class="lead mb-5">Tu clínica veterinaria de confianza en Santo Domingo. Cuidamos a tu mascota con amor, profesionalismo y tecnología de vanguardia.</p>
+            <a href="#servicios" class="btn btn-lg cta-button">
+                <i class="fas fa-heart"></i> Ver Nuestros Servicios
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">🩺 Nuestros Servicios</h2>
+            <div class="row g-4">
+                <!-- Card 1: Consulta General -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://purina.com.do/sites/default/files/2022-10/purina-consulta-veterinaria-para-mascotas-lo-que-debes-saber.jpg" 
+                             class="card-img-top service-img" alt="Consulta General">
+                        <div class="card-body text-center">
+                            <i class="fas fa-stethoscope service-icon"></i>
+                            <h3 class="card-title">Consulta General</h3>
+                            <p class="card-text">Revisión completa de salud, vacunación, desparasitación y chequeos preventivos para mantener a tu mascota sana.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Cirugías -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://holavet.com.ar/wp-content/uploads/2022/04/close-up-on-veterinarian-taking-care-of-pet-1.webp" 
+                             class="card-img-top service-img" alt="Cirugías">
+                        <div class="card-body text-center">
+                            <i class="fas fa-procedures service-icon"></i>
+                            <h3 class="card-title">Cirugías</h3>
+                            <p class="card-text">Intervenciones quirúrgicas con equipamiento moderno, anestesia controlada y seguimiento postoperatorio.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Peluquería -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://neozoo.com.ar/wp-content/uploads/2023/06/Iconos-e-imagenes-09.png" 
+                             class="card-img-top service-img" alt="Peluquería">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cut service-icon"></i>
+                            <h3 class="card-title">Peluquería</h3>
+                            <p class="card-text">Baño, corte, arreglo estético y spa para mascotas. Tu peludo saldrá luciendo hermoso y feliz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Equipo -->
+    <section id="equipo" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">👨‍⚕️ Nuestro Equipo Veterinario</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card team-card text-center">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" 
+                             class="team-photo" alt="Dra. Ana López">
+                        <div class="card-body">
+                            <h4>Dra. Ana López</h4>
+                            <p class="specialty">Medicina Interna</p>
+                            <p>Más de 10 años de experiencia en diagnóstico y tratamiento de enfermedades complejas en mascotas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card text-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                             class="team-photo" alt="Dr. Carlos Méndez">
+                        <div class="card-body">
+                            <h4>Dr. Carlos Méndez</h4>
+                            <p class="specialty">Cirugía Veterinaria</p>
+                            <p>Especialista en cirugía ortopédica y tejidos blandos, con certificación internacional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card text-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" 
+                             class="team-photo" alt="Dra. Laura Gómez">
+                        <div class="card-body">
+                            <h4>Dra. Laura Gómez</h4>
+                            <p class="specialty">Dermatología y Nutrición</p>
+                            <p>Experta en problemas de piel, alergias y planes nutricionales personalizados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section id="testimonios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">💬 Lo que dicen nuestros clientes</h2>
+            <div id="testimoniosCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Vista 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/1.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Excelente atención, mi perro salió feliz del baño. ¡Súper recomendado!" 🐕</p>
+                                    <strong>- María Pérez</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/2.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Operaron a mi gatita y todo salió perfecto. Profesionales de primera. 🐈"</p>
+                                    <strong>- Juan Ramírez</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/3.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"La Dra. Ana es increíble, siempre atenta y cariñosa con mi mascota. ❤️"</p>
+                                    <strong>- Luisa Fernández</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/4.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Precios justos y atención de primera calidad. ¡Mi veterinaria de confianza!" 🏥</p>
+                                    <strong>- Pedro Martínez</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Vista 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/5.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Salvamos a nuestro perrito gracias a su cirugía. ¡Mil gracias! 🙏"</p>
+                                    <strong>- Carmen Díaz</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/6.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"El mejor servicio en toda la zona. Mi gato ama venir aquí. 😺"</p>
+                                    <strong>- Roberto Sánchez</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/7.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Peluquería de lujo, mi perrita salió hermosa y perfumada. 💇‍♀️"</p>
+                                    <strong>- Ana Torres</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/8.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Atención 24/7 cuando más lo necesitaba. ¡Son lo mejor! 🌟"</p>
+                                    <strong>- Miguel Herrera</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Vista 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/9.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Mis tres mascotas son atendidas aquí. Personal súper amable. 🐾"</p>
+                                    <strong>- Sofía Medina</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/10.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Diagnóstico rápido y preciso. Me explicaron todo claramente. 👨‍⚕️"</p>
+                                    <strong>- José Álvarez</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/women/11.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Llevo años viniendo y siempre me tratan como en casa. 🏡"</p>
+                                    <strong>- Patricia Núñez</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 testimonial-col">
+                                <div class="testimonial-card rainbow-border">
+                                    <img src="https://randomuser.me/api/portraits/men/12.jpg" class="testimonial-photo heart-beat" alt="Cliente">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p>"Los mejores veterinarios de la República Dominicana. 🇩🇴"</p>
+                                    <strong>- David Peña</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botones fuera del carrusel -->
+                <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">📞 Contáctanos</h2>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card contact-card">
+                        <div class="card-body text-center">
+                            <h3 class="mb-3">Llámanos</h3>
+                            <a href="tel:+18095551234" class="phone-number d-block mb-3">
+                                <i class="fas fa-phone"></i> 809-555-1234
+                            </a>
+                            <p class="text-muted">📍 Santo Domingo, República Dominicana</p>
+                            <a href="https://wa.me/18095551234" target="_blank" class="btn whatsapp-btn mt-3">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <hr class="my-4">
+                            <h5><i class="fas fa-clock"></i> Horarios</h5>
+                            <p>Lun - Vie: 8:00 AM - 8:00 PM<br>
+                               Sábados: 9:00 AM - 5:00 PM<br>
+                               Domingos: Emergencias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card form-card">
+                        <div class="card-body">
+                            <h3 class="mb-4 text-center">Envíanos un Mensaje</h3>
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Ingresa un correo válido.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                    <div class="invalid-feedback">Escribe tu mensaje.</div>
+                                </div>
+                                <button type="submit" class="btn submit-btn w-100">
+                                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">✅ Confirmación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <h2 class="mb-3">🎉 ¡Mensaje enviado!</h2>
+                    <p class="lead">Tu correo se ha abierto correctamente 💌</p>
+                    <p>🐾 Hemos recibido tu mensaje y te responderemos pronto. ¡Gracias por confiar en PetCare! ❤️</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center text-white">
+            <div class="social-icons mb-3">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Santo Domingo, RD</p>
+            <p class="mb-1"><i class="fas fa-clock"></i> Lun - Vie: 8:00 AM - 8:00 PM | Sáb: 9:00 AM - 5:00 PM</p>
+            <p class="mb-0">&copy; 2026 PetCare - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>

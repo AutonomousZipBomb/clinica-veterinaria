@@ -1,0 +1,131 @@
+/* Variables CSS */
+:root{
+  --color-primario: #2C3E50;
+  --color-secundario: #18BC9C;
+  --color-acento: #F39C12;
+  --bg-light: #f8f9fa;
+  --text-muted: #6c757d;
+  --radius: 12px;
+  --shadow-soft: 0 6px 18px rgba(44,62,80,0.12);
+  --transition-fast: 200ms ease;
+  --max-width: 1200px;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+/* Global */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: var(--font-sans);
+  color:var(--color-primario);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+#mainNav{
+  background: linear-gradient(90deg, rgba(44,62,80,0.95), rgba(24,188,156,0.9));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.navbar-brand .brand-text{font-weight:700}
+.nav-link{color:rgba(255,255,255,0.95) !important}
+.nav-link:hover{color:var(--color-acento) !important; transform:translateY(-2px); transition:var(--transition-fast)}
+
+/* BANNER */
+.banner-section{position:relative; min-height:420px; display:flex; align-items:center; justify-content:center; overflow:hidden}
+.banner-image{position:absolute; inset:0; background-size:cover; background-position:center; filter:brightness(0.55); z-index:0; object-fit:cover}
+.banner-content{position:relative; z-index:2; padding:4rem 1rem}
+.btn-cta{background:var(--color-secundario); color:#fff; border-radius:40px; padding:0.9rem 1.6rem; box-shadow:var(--shadow-soft)}
+.btn-cta:hover{transform:translateY(-3px); box-shadow:0 10px 30px rgba(24,188,156,0.18)}
+
+/* SERVICES */
+.section-title{color:var(--color-primario); font-weight:700}
+.service-card{border-radius:var(--radius); overflow:hidden; transition:transform 250ms ease, box-shadow 250ms ease; box-shadow:var(--shadow-soft)}
+.service-card:hover{transform:translateY(-8px); box-shadow:0 18px 40px rgba(44,62,80,0.12)}
+.service-img{height:220px; object-fit:cover; width:100%}
+
+/* TEAM */
+.team-photo{width:120px; height:120px; object-fit:cover; border:6px solid #fff; box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+.team-card{border-radius:var(--radius); box-shadow:var(--shadow-soft)}
+
+/* TESTIMONIALS */
+#testimonialTrack{transition:transform 450ms cubic-bezier(.2,.9,.2,1); padding-bottom:8px}
+.testimonial{
+  min-width: calc((100% - 3*1rem) / 4);
+  flex:0 0 auto;
+  border-radius:14px;
+  padding:1rem;
+  background:#fff;
+  box-shadow:var(--shadow-soft);
+  display:flex;
+  gap:0.75rem;
+  align-items:flex-start;
+  border:4px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Rainbow animated border */
+@keyframes rainbow {
+  0%{border-color:#ff4d4d}
+  16%{border-color:#ff9a4d}
+  33%{border-color:#f3ff4d}
+  50%{border-color:#4dff9a}
+  66%{border-color:#4dd2ff}
+  83%{border-color:#9a4dff}
+  100%{border-color:#ff4d4d}
+}
+.testimonial.rainbow{animation:rainbow 6s linear infinite}
+
+/* Avatar heartbeat */
+.avatar{
+  width:64px; height:64px; border-radius:50%; object-fit:cover; border:3px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+@keyframes heartbeat {
+  0%{transform:scale(1)}
+  25%{transform:scale(1.06)}
+  50%{transform:scale(1)}
+  75%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
+.avatar.beat{animation:heartbeat 1.6s ease-in-out infinite}
+
+/* Testimonial content */
+.testimonial .meta{display:flex; gap:0.75rem; align-items:center}
+.testimonial .name{font-weight:700}
+.testimonial .text{font-size:0.95rem; color:var(--color-primario)}
+
+/* CONTACT */
+.contact-card{border-radius:var(--radius); box-shadow:var(--shadow-soft); transition:transform 200ms ease}
+.contact-card:hover{transform:translateY(-6px)}
+.contact-form{border-radius:var(--radius); box-shadow:var(--shadow-soft); transition:box-shadow 200ms ease}
+.contact-form:focus-within{box-shadow:0 12px 30px rgba(24,188,156,0.12)}
+.phone-number{color:var(--color-primario)}
+
+/* FOOTER */
+footer .social-icon{display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:rgba(255,255,255,0.06); color:#fff; transition:transform 180ms ease}
+footer .social-icon:hover{transform:translateY(-4px); background:rgba(255,255,255,0.12)}
+
+/* Responsive adjustments */
+@media (max-width: 991px){
+  .banner-content{padding:3rem 1rem}
+  .service-img{height:180px}
+  .team-photo{width:100px;height:100px}
+  .testimonial{min-width: calc((100% - 2*1rem) / 2)}
+}
+@media (max-width: 575px){
+  .banner-content h1{font-size:1.6rem}
+  .testimonial{min-width:100%}
+  .avatar{width:56px;height:56px}
+}
+
+/* Accessibility focus */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(24,188,156,0.18); outline-offset:2px}
+
+/* Utility tweaks */
+.small-muted{color:var(--text-muted)}
+
+/* Ensure images cover */
+img, .banner-image{object-fit:cover}

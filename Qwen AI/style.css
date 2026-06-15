@@ -1,0 +1,430 @@
+/* Variables CSS */
+:root {
+    --primary: #2C3E50;
+    --secondary: #18BC9C;
+    --accent: #F39C12;
+    --light: #f8f9fa;
+    --dark: #1a252f;
+    --transition: all 0.3s ease;
+}
+
+/* Reset y Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--primary) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.navbar-brand i {
+    color: var(--secondary);
+}
+
+.nav-link {
+    color: #fff !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--secondary) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+                url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cta-button {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+    color: #fff;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+/* Cards de Servicios */
+.service-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.service-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin: 15px 0;
+}
+
+.service-card .card-title {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Cards de Equipo */
+.team-card {
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary);
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.team-card h4 {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.specialty {
+    color: var(--secondary);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Testimonios */
+.testimonial-carousel {
+    position: relative;
+    padding: 0 60px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Borde arcoíris animado */
+.rainbow-border::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+    background-size: 400%;
+    border-radius: 17px;
+    z-index: -1;
+    animation: rainbow 4s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    margin-bottom: 10px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin: 15px 0;
+    color: #555;
+}
+
+.testimonial-card strong {
+    color: var(--primary);
+}
+
+/* Botones personalizados del carrusel fuera del carrusel */
+.custom-carousel-btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary) !important;
+    border-radius: 50%;
+    opacity: 1 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.custom-carousel-btn i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.custom-carousel-btn:hover {
+    background-color: var(--accent) !important;
+}
+
+.carousel-control-prev.custom-carousel-btn {
+    left: -25px;
+}
+
+.carousel-control-next.custom-carousel-btn {
+    right: -25px;
+}
+
+/* Contacto */
+.contact-card, .form-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(24, 188, 156, 0.3);
+}
+
+.phone-number {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.phone-number:hover {
+    color: var(--secondary);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.2rem rgba(24, 188, 156, 0.25);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background-color: var(--secondary);
+    transform: translateY(-5px) rotate(360deg);
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    .testimonial-carousel {
+        padding: 0 20px;
+    }
+    .carousel-control-prev.custom-carousel-btn {
+        left: -10px;
+    }
+    .carousel-control-next.custom-carousel-btn {
+        right: -10px;
+    }
+    .custom-carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .phone-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .service-img {
+        height: 200px;
+    }
+    .testimonial-card {
+        min-height: auto;
+    }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
